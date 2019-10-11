@@ -2,7 +2,44 @@ FROM ruby:2.6.5-slim
 
 ENV LANG C.UTF-8
 
-RUN apt-get update && apt-get install -y gnupg curl
+RUN apt-get update -y \
+    && apt-get install -y -q --no-install-recommends \
+        gnupg \
+        apt-utils \
+        autoconf \
+        build-essential \
+        ca-certificates \
+        cmake \
+        curl \
+        file \
+        git \
+        imagemagick \
+        libcurl3 \
+        libcurl3-gnutls \
+        libcurl4-openssl-dev \
+        libffi-dev \
+        libgdbm-dev \
+        libgmp-dev \
+        libicu-dev \
+        libjemalloc-dev \
+        libjemalloc1 \
+        libmagickwand-dev \
+        libmysqlclient-dev \
+        libncurses5-dev \
+        libpq-dev \
+        libqdbm-dev \
+        libreadline6-dev \
+        libsqlite3-dev \
+        libssl-dev \
+        libxml2-dev \
+        libxslt-dev \
+        libyaml-dev \
+        libz-dev \
+        systemtap \
+        tzdata \
+    && apt-get install -y -q --no-install-recommends libgit2-dev \
+    && apt-get upgrade -yq \
+    && apt-get clean
 
 RUN groupadd --gid 1000 node \
   && useradd --uid 1000 --gid node --shell /bin/bash --create-home node
