@@ -1,4 +1,4 @@
-FROM ruby:2-slim
+FROM ruby:2.6.5-slim
 
 ENV LANG C.UTF-8
 
