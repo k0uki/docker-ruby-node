@@ -15,14 +15,11 @@ RUN apt-get update -y \
         git \
         imagemagick \
         libcurl4 \
-        libcurl4-gnutls-dev \
         libcurl4-openssl-dev \
         libffi-dev \
         libgdbm-dev \
         libgmp-dev \
         libicu-dev \
-        libjemalloc-dev \
-        libjemalloc1 \
         libmagickwand-dev \
         libmariadb-dev \
         libncurses5-dev \
