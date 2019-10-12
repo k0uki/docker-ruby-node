@@ -14,8 +14,8 @@ RUN apt-get update -y \
         file \
         git \
         imagemagick \
-        libcurl3 \
-        libcurl3-gnutls \
+        libcurl4 \
+        libcurl4-gnutls-dev \
         libcurl4-openssl-dev \
         libffi-dev \
         libgdbm-dev \
@@ -24,7 +24,7 @@ RUN apt-get update -y \
         libjemalloc-dev \
         libjemalloc1 \
         libmagickwand-dev \
-        libmysqlclient-dev \
+        libmariadb-dev \
         libncurses5-dev \
         libpq-dev \
         libqdbm-dev \
